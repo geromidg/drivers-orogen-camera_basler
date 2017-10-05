@@ -1,0 +1,11 @@
+name "camera_basler"
+
+using_library "camera_basler"
+
+using_task_library "camera_base"
+import_types_from "camera_base"
+
+task_context "Task" do
+    subclasses "camera_base::Task"
+end
+

@@ -1,0 +1,19 @@
+<package>
+  <description brief="Component for the GigE Basler camera interface.">
+  A component that receives frames from a GigE Basler camera.
+  </description>
+  <author>Dimitris Geromichalos/geromidg@gmail.com</author>
+  <license></license>
+  <url>http://</url>
+  <logo>http://</logo>
+  <depend package="base/cmake" />
+  <!--
+   To add any dependencies use the depend tag
+  <depend package="dummy-dependency-0" />
+	...
+  <depend package="dummy-dependency-n-1" />
+  <depend package="dummy-dependency-n" />
+  -->
+  <depend package="drivers/orogen/camera_base" />
+  <depend package="drivers/camera_basler" />
+</package>
