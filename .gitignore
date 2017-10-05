@@ -6,3 +6,11 @@ build/*
 
 *autobuild-stamp
 
+orocos.orocosrb_*
+
+*txt
+
+.ycm*
+
+tags
+
