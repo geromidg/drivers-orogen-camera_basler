@@ -27,7 +27,7 @@ namespace camera_basler
 
         /** Default deconstructor of Task
          */
-	    ~Task();
+	    virtual ~Task(void);
 
         /** This hook is called by Orocos when the state machine transitions
          * from PreOperational to Stopped. If it returns false, then the
@@ -37,7 +37,7 @@ namespace camera_basler
          * It is meaningful only if the #needs_configuration has been specified
          * in the task context definition with (for example):
          */
-        bool configureHook();
+        bool configureHook(void);
     };
 
 }  // namespace camera_basler
