@@ -38,6 +38,7 @@ namespace camera_basler
             return false;
         }
 
+        cam_gige_basler->open();
         cam_gige_basler->setCameraSize(_width, _height);
 
         cam_interface = cam_gige_basler;
