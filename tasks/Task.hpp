@@ -11,7 +11,7 @@ namespace camera_basler
 
     class Task : public TaskBase
     {
-	friend class TaskBase;
+        friend class TaskBase;
 
     public:
         /** TaskContext constructor for Task
@@ -19,15 +19,15 @@ namespace camera_basler
          */
         Task(std::string const& name = "camera_basler::Task");
 
-        /** TaskContext constructor for Task 
-         * \param name Name of the task. This name needs to be unique to make it identifiable for nameservices. 
-         * \param engine The RTT Execution engine to be used for this task, which serialises the execution of all commands, programs, state machines and incoming events for a task. 
+        /** TaskContext constructor for Task
+         * \param name Name of the task. This name needs to be unique to make it identifiable for nameservices.
+         * \param engine The RTT Execution engine to be used for this task, which serialises the execution of all commands, programs, state machines and incoming events for a task.
          */
         Task(std::string const& name, RTT::ExecutionEngine* engine);
 
         /** Default deconstructor of Task
          */
-	    virtual ~Task(void);
+        virtual ~Task(void);
 
         /** This hook is called by Orocos when the state machine transitions
          * from PreOperational to Stopped. If it returns false, then the
