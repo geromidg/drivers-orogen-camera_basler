@@ -36,7 +36,8 @@ namespace camera_basler
         }
         catch (std::runtime_error e)
         {
-            RTT::log(RTT::Error) << "Failed to initialize camera: " << e.what() << RTT::endlog();
+            RTT::log(RTT::Error) << "Failed to initialize camera: "
+                << e.what() << RTT::endlog();
 
             return false;
         }

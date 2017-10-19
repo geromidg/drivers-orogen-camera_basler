@@ -15,13 +15,18 @@ namespace camera_basler
 
     public:
         /** TaskContext constructor for Task
-         * \param name Name of the task. This name needs to be unique to make it identifiable via nameservices.
+         * \param name Name of the task. This name needs to be unique to make
+         *             it identifiable via nameservices.
          */
         Task(std::string const& name = "camera_basler::Task");
 
         /** TaskContext constructor for Task
-         * \param name Name of the task. This name needs to be unique to make it identifiable for nameservices.
-         * \param engine The RTT Execution engine to be used for this task, which serialises the execution of all commands, programs, state machines and incoming events for a task.
+         * \param name Name of the task. This name needs to be unique to make
+         *             it identifiable for nameservices.
+         * \param engine The RTT Execution engine to be used for this task,
+         *               which serialises the execution of all commands,
+         *               programs, state machines and incoming events
+         *               for a task.
          */
         Task(std::string const& name, RTT::ExecutionEngine* engine);
 
@@ -34,8 +39,8 @@ namespace camera_basler
          * component will stay in PreOperational. Otherwise, it goes into
          * Stopped.
          *
-         * It is meaningful only if the #needs_configuration has been specified
-         * in the task context definition with (for example):
+         * It is meaningful only if the #needs_configuration has been
+         * specified in the task context definition with (for example):
          */
         bool configureHook(void);
     };
