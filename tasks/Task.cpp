@@ -22,12 +22,15 @@ namespace camera_basler
         if (!TaskBase::configureHook())
             return false;
 
-        camera::CamGigEBasler* cam_gige_basler;
-
         try
         {
-            // TODO: Use shared pointer
-            cam_gige_basler = new camera::CamGigEBasler();
+            std::unique_ptr<camera::CamGigEBasler> cam_gige_basler;
+            cam_gige_basler.reset(new camera::CamGigEBasler());
+
+            cam_gige_basler->open();
+            cam_gige_basler->setCameraSize(_width, _height);
+
+            cam_interface = cam_gige_basler.release();
 
             RTT::log(RTT::Info) << "Initialized camera." << RTT::endlog();
         }
@@ -37,11 +40,6 @@ namespace camera_basler
 
             return false;
         }
-
-        cam_gige_basler->open();
-        cam_gige_basler->setCameraSize(_width, _height);
-
-        cam_interface = cam_gige_basler;
 
         return true;
     }
